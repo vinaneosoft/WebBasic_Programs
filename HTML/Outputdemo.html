@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output tag</title>
+</head>
+<body>
+    <form >
+        <input type="text" placeholder="enter company name" 
+        id="company" oninput="result.value=company.value.toUpperCase()">
+    </form>
+    <p>
+        <b><output id="result"></output></b>
+    </p>
+    <hr>
+     <form>
+        <input type="number" placeholder="enter first number" 
+        id="num1" > +
+        <input type="number" placeholder="enter second number" 
+        id="num2" > =  <b><output id="addition"></output></b>
+    </form>
+</body>
+</html>
