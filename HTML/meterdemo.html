@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        meter{
+            width: 50%;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- value, min, max : green indicator : every value is safe-->
+  
+    <label>Fuel Indicator:</label>
+    <meter id="fuelindicator" value="0" min="0" max="500"></meter> : litr
+    <button type="button" onclick="fillFuel()">FILL TANK</button>
+
+    <script>
+        const meterEle=document.getElementById("fuelindicator");
+        function fillFuel(){
+            const interval=setInterval(function(){
+                meterEle.value++;
+                console.log(meterEle.value);
+                if(meterEle.value==meterEle.max)
+                    clearInterval(interval);
+            }, 10);
+        }
+
+    </script>
+</body>
+</html>
