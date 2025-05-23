@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>EMPLOYEE COURSE REGISTRATION FORM</h2>
-    <form>
+    <form action="./success.html">
         <input type="text" value="NESOFT" readonly>
         <input type="text" value="NESOFT" disabled>
         <input type="text" placeholder="set username" title="only alphabets allowed" pattern="[A-Za-z]*" minlength="2" maxlength="6" /> <!-- length range : minlength, maxlength-->
@@ -15,8 +15,15 @@
         <input type="number" min="21" max="40" id="age" title="age between 21 to 40"> <!-- 21 to 40 value range : min, max-->
         <!-- create password field and set strong password pattern to validate pattern-->
         <input type="text" placeholder="enter name" required>
+        <div class="gendergroup">
+            <input type="radio" id="radio1" value="male" name="gender" checked><label for="radio1">:MALE</label>
+            <input type="radio" id="radio2" value="female" name="gender"><label for="radio2">:FEMALE</label>
+        </div>
+        <input type="datetime-local">
         <button type="submit">REGISTER</button>
         <input type="submit" value="REGISTER" />
+        <input type="image" height="200" width="100" src="https://th.bing.com/th/id/OIP.NGlXkbBkXLkhd9PGqGRjSQHaFj?cb=iwc2&rs=1&pid=ImgDetMain">
+        <input type="color">
     </form>
 </body>
 </html>
