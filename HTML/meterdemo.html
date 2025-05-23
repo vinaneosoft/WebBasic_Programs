@@ -13,9 +13,11 @@
 </head>
 <body>
     <!-- value, min, max : green indicator : every value is safe-->
-  
+   <!-- value, min, max, low, high : orange indicator, green indicator : low to high value is safe-->
+      <!-- value, min, max, low, high, optimum : if optimum is between high and max then higher values are safer
+       if optimum is between min and low then lower values are safer-->
     <label>Fuel Indicator:</label>
-    <meter id="fuelindicator" value="0" min="0" max="500"></meter> : litr
+    <meter id="fuelindicator" value="0" min="0" low="100" optimum="400" high="300" max="500"></meter> : litr
     <button type="button" onclick="fillFuel()">FILL TANK</button>
 
     <script>
