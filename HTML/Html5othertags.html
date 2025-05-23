@@ -25,5 +25,22 @@
         <option >orange</option>
     </datalist>
     <input type="text" list="flavorlist" value="chocolate" placeholder="choose flavour">
+    <hr>
+    <section>
+        <h3>AUDIO TAG EXAMPLE</h3>
+        <!-- use attributes : autoplay loop-->
+        <audio  src="./resources/sampleaudio.mp3" controls></audio>
+        <video  src="./resources/big_buck_bunny_720p_1mb.mp4" height="400" width="400" controls></video>
+        <audio controls>
+            <source src="./resources/sampleaudio.mp3" type="audio/mp3"> <!-- server 1-->
+            <source src="./resources/sampleaudio.mp3"> <!-- server 2-->
+            <source src="./resources/sampleaudio.mp3"> <!-- server 3-->
+        </audio>
+        <video height="400" width="400" controls>
+            <source src="./resources/big_buck_bunny_720p_1mb.mov" type="video/mov">  <!-- format 1-->
+            <source src="./resources/big_buck_bunny_720p_1mb.avi">  <!-- format 2-->
+            <source src="./resources/big_buck_bunny_720p_1mb.mp4">  <!-- format 3-->
+        </video>
+    </section>
 </body>
 </html>
