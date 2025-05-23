@@ -8,10 +8,13 @@
 <body>
     <h2>EMPLOYEE COURSE REGISTRATION FORM</h2>
     <form>
-        <input type="text" placeholder="set username" minlength="2" maxlength="6" /> <!-- length range : minlength, maxlength-->
+        <input type="text" value="NESOFT" readonly>
+        <input type="text" value="NESOFT" disabled>
+        <input type="text" placeholder="set username" title="only alphabets allowed" pattern="[A-Za-z]*" minlength="2" maxlength="6" /> <!-- length range : minlength, maxlength-->
         <label for="age">Enter your age:</label>
-        <input type="number" min="21" max="40" id="age"> <!-- 21 to 40 value range : min, max-->
-
+        <input type="number" min="21" max="40" id="age" title="age between 21 to 40"> <!-- 21 to 40 value range : min, max-->
+        <!-- create password field and set strong password pattern to validate pattern-->
+        <input type="text" placeholder="enter name" required>
         <button type="submit">REGISTER</button>
         <input type="submit" value="REGISTER" />
     </form>
