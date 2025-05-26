@@ -1,0 +1,29 @@
+/*precedence sequence 1. id, 2. class, 3. element*/
+#firstp{
+    background-color: yellow;
+}
+
+.radomtext{
+     background-color: red;
+}
+
+p{
+       background-color: green;
+}
+
+h1{
+    color: pink;
+}
+/* select ol having order as alphabets*/
+[type='A']{
+    text-decoration: underline;
+}
+/*select elements having type attribute and transform text to upper case*/
+[type]{
+    text-transform: uppercase;
+}
+
+/* select ul elements having type attribute and give font size as 20px*/
+ul[type]{
+    font-size: 20px;
+}
