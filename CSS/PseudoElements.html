@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        #secondh::first-letter{
+            font-size: 40px;
+            color: aqua;
+            font-style: italic;
+        }
+        p::first-line{
+            color: red;
+        }
+        #secondh::before{
+            content: 'Hello ';
+        }
+         #secondh::after{
+            content: ', Rabale';
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1><span>N</span>eosoft</h1>
+    <h1 id="secondh">Neosoft</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+Esse, repellendus consequuntur aliquid fugit reprehenderit aut alias cumque obcaecati quod 
+        totam laborum aliquam nam excepturi dolore iure molestias perspiciatis error ducimus.
+    
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae eveniet, reiciendis voluptatum illo laudantium architecto. Pariatur natus fuga reiciendis aliquam tempora perspiciatis magni cum, 
+    placeat, doloribus a inventore minus repellat.</p>
+</body>
+</html>
