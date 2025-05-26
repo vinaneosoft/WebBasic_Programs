@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*select direct paragraph childs of section*/
+        section>p{
+            background-color: aqua;
+        }
+        /*select direct/indirect (descendants) paragraph childs of section*/
+        section p{
+            color:blueviolet;
+        }
+         /*select direct childs except div of section*/
+         section>:not(div){
+            font-style: italic;
+         }
+         /*select next section element after mydiv*/
+         #mydiv+section{
+            text-transform: capitalize;
+         }
+          /*select next all section elements after mydiv*/
+           #mydiv~section{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+         }
+           /*select next all  elements after mydiv*/
+           #mydiv~*{
+            font-size: 20px;
+         }
+    </style>
+</head>
+<body>
+    
+<section>
+    <h4>INDIA</h4>
+    <p>para 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quibusdam unde et nemo, debitis tenetur adipisci, accusantium minima corporis blanditiis 
+        recusandae numquam, autem non facilis quo. Fugiat ipsa est minus.
+    </p>
+     <p>para 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quibusdam unde et nemo, debitis tenetur adipisci, accusantium minima corporis blanditiis 
+        recusandae numquam, autem non facilis quo. Fugiat ipsa est minus.
+    </p>
+     <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, tenetur velit! Necessitatibus facere nobis quasi laboriosam 
+        aliquid doloremque tempore nemo pariatur? Ipsum officiis ipsam ipsa ab magnam beatae fugiat nihil.
+    </section>
+    <div id="mydiv">
+        <h4>DIV</h4>
+          <p>para 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quibusdam unde et nemo, debitis tenetur adipisci, accusantium minima corporis blanditiis 
+        recusandae numquam, autem non facilis quo. Fugiat ipsa est minus.
+    </p>
+    </div>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, tenetur velit! Necessitatibus facere nobis quasi laboriosam 
+        aliquid doloremque tempore nemo pariatur? Ipsum officiis ipsam ipsa ab magnam beatae fugiat nihil.
+    </section>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, tenetur velit! Necessitatibus facere nobis quasi laboriosam 
+        aliquid doloremque tempore nemo pariatur? Ipsum officiis ipsam ipsa ab magnam beatae fugiat nihil.
+    </section>
+    <article>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad aliquam consectetur maxime enim mollitia, consequuntur repellendus nobis perferendis 
+        voluptatem laboriosam placeat eum facere nulla, quidem ex eveniet nisi! Consectetur, sunt.
+    </article>
+</section>
+
+
+</body>
+</html>
