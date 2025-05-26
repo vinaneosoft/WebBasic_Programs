@@ -13,19 +13,63 @@
             transition: 2s;
         }
        #block1:hover{
-        transform: translate(200px, 300px); /*translateX, translateY*/
+         transform: translate(200px, 300px);
+         transform: translateX(200px);
+         transform: translateY(200px);
        }
-        .block:hover{
-            translate: 400px;
-        }
+     #block2:hover{
+        transform: rotate(-60deg);
+        transform: rotateX(60deg);
+        transform: rotateY(60deg);
+       /* rotate: 45deg; */
+       }
+       #block3, #block4{
+        margin-left: 100px;
+       }
+       #block3:hover{
+        transform:scaleX(2); 
+        transform:scaleY(-2);  /*flip and scale*/
+        transform:scaleY(.5);  /*<1 then shrink*/
+        transform: scale(2); /*w, h */
+         transform: scale(2,4); 
+       }
+       #block4:hover{
+        transform: skew(45deg, 40deg);
+       }
+       figure{
+        border:5px solid violet;
+        height: 200px;
+        width: 200px;
+         overflow: hidden;
+       }
+
+       figure>img{
+         height: 200px;
+        width: 200px;
+        transition: 2s;
+       
+       }
+       figure>img:hover{
+        transform: scale(3);
+       }
+       /*call matrix function of block5 */
     </style>
 </head>
 <body>
     <div class="block" id="block1">
-
+        INDIA
     </div>
     <div class="block" id="block2">
-
+        INDIA
     </div>
+     <div class="block" id="block3">
+        INDIA
+    </div>
+       <div class="block" id="block4">
+        INDIA
+    </div>
+    <figure>
+        <img src="https://th.bing.com/th/id/OIP.sAU9GwmH3kwF1kjFL2FOswHaFj?cb=iwc2&rs=1&pid=ImgDetMain" alt="nature">
+    </figure>
 </body>
 </html>
