@@ -13,11 +13,14 @@
             width: 200px;
             justify-content: center;
             height: 600px;
-            /* align-items: end; */ /*items get aligned in their respective rows*/
-            align-content: space-between; /*items get aligned in single container*/
+             align-items: end; /*items get aligned in their respective rows*/
+            /* align-content: space-between;  *//*items get aligned in single container*/
         }
         .parent div{
             border : 3px double green
+        }
+        #item5{
+            align-self: flex-start; /*it will work only if rest items are aligned using align-items*/
         }
     </style>
 </head>
@@ -37,7 +40,7 @@
             div 4
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vel, eveniet ipsa recusandae nihil commodi similique totam amet accusantium hic consequuntur provident cum soluta illo error minima voluptas adipisci. Animi.
         </div>
-         <div>
+         <div id="item5">
             div 5
         </div>
         <div>
