@@ -11,11 +11,6 @@
             width: 100px;
             height: 100px;
         }
-       #div1:hover{
-            height: 300px;
-            width: 250px;
-            border : 10px dashed pink;
-        }
         #div1{
             transition-duration: 6s;
             transition-delay: 2s;
@@ -23,12 +18,19 @@
            /*  transition-property: height, width; */
            transition-timing-function:cubic-bezier(0.68, -0.55, 0.265, 1.55) /*default : ease*/
         }
+       #div1:hover{
+            height: 300px;
+            width: 250px;
+            border : 10px dashed pink;
+        }
+       
         #div2{
-            transition:5s
+            transition:height 5s 1s ease-in, width 5s 3s linear, background-color 10s 1s ease-out  /*property duration delay*/
         }
         #div2:hover{
             height: 200px;
-            background-color: brown;
+            background-color: green;
+            width: 250px;
         }
     </style>
 </head>
