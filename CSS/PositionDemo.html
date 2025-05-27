@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        div{
+            border: 1px solid red;
+
+        }
+        #div1{
+            margin-left: 50px;
+        }
+        #div2{
+            /* top:50px; */
+            left:50px; 
+            position: relative; /*relative to current position*/
+        }
+        /*absolute : position to child given according to nearest positioned(other than static) ancestor(parent)*/
+    .parent{
+        border: 10px solid green;
+        padding: 50px;
+    }
+    .parent:hover{
+       position: relative;
+    }
+    #child{
+        position: absolute;
+        top:10px;
+        left:5px;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum temporibus harum cumque et vitae quisquam quia consequatur at ex.
+         Quam vel perspiciatis labore, veritatis quas ullam excepturi quod perferendis natus?
+    </div>
+    <div id="div2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel assumenda reiciendis quod eos debitis voluptatum quisquam quaerat, vero doloremque, quia laudantium 
+        voluptatem aspernatur nam earum quam voluptatibus, dolores saepe possimus?
+    </div>
+    <hr>
+    <div class="parent" id="parent1"> 
+        <div  class="parent" id="parent2">
+            <div  class="parent" id="parent3">
+                <section id="child">CHILD</section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
