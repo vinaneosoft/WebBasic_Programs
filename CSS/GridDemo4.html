@@ -17,18 +17,38 @@
         #rs{
             grid-area:rightsection
         }
+        #ft{
+            grid-area: footerpartition;
+        }
+        #hd{
+            grid-area: headerpartition;
+        }
         .gridParent{
             display: grid;
-            grid-template-columns: 200px auto auto;
-            grid-template-areas: 'leftsection centersection centersection rightsection';
+            grid-template-columns: 100px auto auto auto;
+            grid-template-areas:'headerpartition headerpartition headerpartition headerpartition'
+             'leftsection centersection centersection rightsection'
+                'footerpartition footerpartition footerpartition footerpartition';
         }
     </style>
 </head>
 <body>
     <section class="gridParent">
-        <div id="ls">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident excepturi temporibus molestiae ipsa amet non natus? Dolorem, eaque ut beatae quis totam numquam exercitationem blanditiis amet, veniam similique ipsum voluptatibus.</div>
+         <div id="hd">
+            
+        
+        
+        design navbar in the header
+        
+        
+        
+        
+        
+        </div>
+        <div id="ls">left side  </div>
          <div id="c"> center</div>
           <div id="rs"> right side</div>
+            <div id="ft"> footer</div>
     </section>
 </body>
 </html>
