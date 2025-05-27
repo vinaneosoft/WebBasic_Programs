@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Demo</title>
+    <style>
+        section, div{
+            border : 5px solid
+        }
+        #ls{
+            grid-area: leftsection;
+        }
+        #c{
+            grid-area: centersection;
+        }
+        #rs{
+            grid-area:rightsection
+        }
+        .gridParent{
+            display: grid;
+            grid-template-columns: 200px auto auto;
+            grid-template-areas: 'leftsection centersection centersection rightsection';
+        }
+    </style>
+</head>
+<body>
+    <section class="gridParent">
+        <div id="ls">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident excepturi temporibus molestiae ipsa amet non natus? Dolorem, eaque ut beatae quis totam numquam exercitationem blanditiis amet, veniam similique ipsum voluptatibus.</div>
+         <div id="c"> center</div>
+          <div id="rs"> right side</div>
+    </section>
+</body>
+</html>
