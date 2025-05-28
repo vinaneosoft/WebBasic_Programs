@@ -14,7 +14,8 @@
 <body>
     <div>
         <h3 id="heading"><i style="text-decoration: underline;">Neosoft</i></h3>
-        <h4 id="subheading">          </h4>
+        <h4 id="subheading">      </h4>
+         <h4 id="subheading2">      </h4>
         <p class="india">India is my country.</p>
          <p>I love my country.</p>
           <p class="india">I love my India.</p>
@@ -37,6 +38,12 @@
                 const subNode=document.getElementById('subheading')
                 subNode.innerHTML=headingNode.innerHTML;
 
+                // plaintext of mainheading should be copied in subheading in small tag
+                 const subNode2=document.getElementById('subheading2')
+                subNode2.innerHTML='<small>'+headingNode.innerText+'</small>'
+                subNode2.innerHTML=`<small>${headingNode.innerText}</small>`
+                subNode2.innerHTML=headingNode.textContent.small();
+                
                 const nodes=document.getElementsByClassName("india");
                 for(let node of nodes){
                     node.style.background='linear-gradient(red,yellow,blue)'
