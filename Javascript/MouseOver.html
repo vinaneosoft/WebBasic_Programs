@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<figure>
+    <img id="image" height="200" width="200" src="https://th.bing.com/th/id/OIP._xP-NimPZ38bkf6wg9DuWAHaE9?cb=iwc2&rs=1&pid=ImgDetMain" alt="" 
+    onmouseover="changeImage()" onmouseout="resetImage()">
+    <figcaption id="imglabel">SEA IMAGE</figcaption>
+</figure>
+    <script>
+        const imageNode=document.getElementById('image');
+        const captionNode=document.getElementById('imglabel');
+        function changeImage(){
+            imageNode.src="https://cdn.pixabay.com/photo/2020/03/10/20/27/lorem-4920209_1280.jpg";
+            captionNode.textContent='FLOWER IMAGE'
+        }
+        function resetImage(){
+            imageNode.src="https://th.bing.com/th/id/OIP._xP-NimPZ38bkf6wg9DuWAHaE9?cb=iwc2&rs=1&pid=ImgDetMain";
+            captionNode.textContent='SEA IMAGE'
+        }
+    </script>
+</body>
+</html>

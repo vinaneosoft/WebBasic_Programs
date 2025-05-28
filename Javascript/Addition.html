@@ -7,15 +7,15 @@
 
 </head>
 <body >
-    <form onsubmit="add()">
+    <form onsubmit="add()" oninput="add()">
        <table>
         <tr>
             <td> <label for="num1">Number 1:</label></td>
-            <td><input type="number" name="num" id="num1" autofocus></td>
+            <td><input type="number" name="num" id="num1" value="0" autofocus></td>
         </tr>
          <tr>
             <td> <label for="num2">Number 2:</label></td>
-            <td><input type="number" name="num" id="num2"></td>
+            <td><input type="number" name="num" id="num2" value="0"></td>
         </tr>
         <tr>
             <td></td>
@@ -28,7 +28,8 @@
     </form>
     <p>
         <b>Addition is :</b><b id="result"></b><br>
-        <label for="addresult">Addition is : </label><input type="number" id="addresult" readonly>
+        <label for="addresult">Addition is : </label>
+        <input type="number" id="addresult" readonly>
     </p>
 
    

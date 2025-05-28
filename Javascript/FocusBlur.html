@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="xyz" type="text" name="" id="ff" onfocus="setBorder()" onblur="removeBorder()">
+    <input type="text" onfocus="setBorder()" onblur="removeBorder()">
+    <!--create 2 input fields on focus on input field apply border, on blur remove the border-->
+
+    <script>
+        function setBorder(){
+            console.log(event); 
+            const inputNode=event.target;
+            inputNode.style.border="5px solid blue";
+        }
+        function removeBorder(){
+            const inputNode=event.target;
+            inputNode.style="";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+<!-- show password on checking of checkbox
+hide it again after unchecking of checkbox -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show pass Demo</title>
+</head>
+<body>
+    <input type="password" id="pass" placeholder="enter password">
+    <input type="checkbox" id="check" onchange="showhide()" title="showpass">
+    <label for="check">show password</label>
+    <script>
+        const passNode=document.getElementById('pass');
+        const checkNode=document.getElementById('check');
+        function showhide(){
+            if(checkNode.checked)
+                passNode.type="text"
+            else 
+                passNode.type="password";
+        }
+    </script>
+</body>
+</html>
