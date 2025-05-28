@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #heading{
+            background: yellow;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h3 id="heading">Neosoft</h3>
+        <h3 id="heading"><i style="text-decoration: underline;">Neosoft</i></h3>
+        <h4 id="subheading">          </h4>
         <p class="india">India is my country.</p>
          <p>I love my country.</p>
           <p class="india">I love my India.</p>
@@ -18,11 +25,31 @@
             function accessNode(){
                 const headingNode=document.getElementById("heading");
                 console.log(headingNode);
+                headingNode.style.background='pink'; /*key camelcase*/
+                headingNode.style.color='red';
+                headingNode.style.cssText="background:gray; color:green; font-style:italic" /*css key value pairs*/
+
+                console.log(headingNode.textContent); //plaintext
+                console.log(headingNode.innerText); //plaintext
+                console.log(headingNode.innerHTML); //text along with its html
                 //document.write(headingNode); // it should not be used
-                const nodes=document.getElementsByClassName('india');
+
+                const subNode=document.getElementById('subheading')
+                subNode.innerHTML=headingNode.innerHTML;
+
+                const nodes=document.getElementsByClassName("india");
+                for(let node of nodes){
+                    node.style.background='linear-gradient(red,yellow,blue)'
+                }
                 console.log(nodes);
-                
+                /*getElementsByTagName*/
+                //document.getElementsByTagName('p');
+                //getElementsByName
             }
         </script>
 </body>
 </html>
+<!-- access contents from element, style elements on hover, make example of addition, 
+ access attributes, make example of password show and hide, 
+ change style via timeout
+ -->
