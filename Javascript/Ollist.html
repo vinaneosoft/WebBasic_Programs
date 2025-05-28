@@ -16,13 +16,6 @@
     </style>
 </head>
 <body>
-    
-
-
-
-
-
-
     <script>
         const snacks=['samosa','panipuri','vadapav','pakoda','poha'];
        /*  const snacks2=new Array('samosa','panipuri','vadapav','pakoda','poha');
@@ -31,15 +24,28 @@
         const olNode=document.createElement('ol'); // single
         olNode.className="listStyle";
         olNode.classList.add('olStyle');
-        for(let snack of snacks){
+        olNode.id="snacklist"
+        for(let i=0;i<snacks.length;i++ ){
             const liNode=document.createElement('li');
-            liNode.textContent=snack.toUpperCase();
+            liNode.id='s'+i;
+            liNode.textContent=snacks[i].toUpperCase();
             olNode.appendChild(liNode);
            // olNode.append(liNode);
         }
       
         document.body.prepend(olNode);
- 
+    const menu = ['dal','bhat','loncha','papad'];
+        const ulNode = document.createElement('ul');
+        ulNode.className="listStyle";
+        ulNode.classList.add('ulStyle')
+        ulNode.id='menulist'
+        for(let item of menu){
+            const liNode = document.createElement('li')
+            liNode.textContent=item.toUpperCase();
+            ulNode.appendChild(liNode);
+        }
+      //  document.body.append(ulNode);
+        olNode.after(ulNode);
     </script>
 </body>
 </html>
