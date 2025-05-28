@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3 id="heading">Neosoft</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi voluptatum dolor magni perferendis deserunt eos cumque dolorem impedit tempora quidem provident 
+            vel praesentium blanditiis laboriosam distinctio nesciunt, repellendus officia.</p>
+            <button type="button" onclick="accessNode()">ACCESS NODE</button>
+        </div>
+        <script>
+            function accessNode(){
+                const headingNode=document.getElementById("heading");
+                console.log(headingNode);
+                document.write(headingNode); // it should not be used
+            }
+        </script>
+</body>
+</html>
