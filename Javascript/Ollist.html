@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OL</title>
 
     <style>
-        .listStyle{
+        .listStyle {
             border: 4px solid red;
             background-color: yellow;
         }
-        .olStyle{
+
+        .olStyle {
             list-style-type: lower-greek;
         }
     </style>
 </head>
+
 <body>
+    <button type="button" onclick="removeNode()">REMOVE CHILD</button>
     <script>
-        const snacks=['samosa','panipuri','vadapav','pakoda','poha'];
-       /*  const snacks2=new Array('samosa','panipuri','vadapav','pakoda','poha');
-        const arr1=[];
-        const arr2=new Array(3,5,67,8); */
-        const olNode=document.createElement('ol'); // single
-        olNode.className="listStyle";
+        const snacks = ['samosa', 'panipuri', 'vadapav', 'pakoda', 'poha'];
+        /*  const snacks2=new Array('samosa','panipuri','vadapav','pakoda','poha');
+         const arr1=[];
+         const arr2=new Array(3,5,67,8); */
+        const olNode = document.createElement('ol'); // single
+        olNode.className = "listStyle";
         olNode.classList.add('olStyle');
-        olNode.id="snacklist"
-        for(let i=0;i<snacks.length;i++ ){
-            const liNode=document.createElement('li');
-            liNode.id='s'+i;
-            liNode.textContent=snacks[i].toUpperCase();
+        olNode.id = "snacklist"
+        for (let i = 0; i < snacks.length; i++) {
+            const liNode = document.createElement('li');
+            liNode.id = 's' + i;
+            liNode.textContent = snacks[i].toUpperCase();
             olNode.appendChild(liNode);
-           // olNode.append(liNode);
+            // olNode.append(liNode);
         }
-      
+
         document.body.prepend(olNode);
-    const menu = ['dal','bhat','loncha','papad'];
+        const menu = ['dal', 'bhat', 'loncha', 'papad'];
         const ulNode = document.createElement('ul');
-        ulNode.className="listStyle";
+        ulNode.className = "listStyle";
         ulNode.classList.add('ulStyle')
-        ulNode.id='menulist'
-        for(let item of menu){
+        ulNode.id = 'menulist'
+        for (let item of menu) {
             const liNode = document.createElement('li')
-            liNode.textContent=item.toUpperCase();
+            liNode.textContent = item.toUpperCase();
             ulNode.appendChild(liNode);
         }
-      //  document.body.append(ulNode);
-        olNode.after(ulNode);
+        //  document.body.append(ulNode);
+        olNode.after(ulNode); // before
+
+        let li1=document.createElement('li');
+        li1.textContent='roti'.toUpperCase();
+         let li2=document.createElement('li');
+        li2.textContent='paneer burji';
+        ulNode.append(li1,li2);
+
+        function removeNode(){
+            li2.remove(); // element.remove
+            ulNode.removeChild(ulNode.lastChild); // parent.remove(child)
+        }
+        console.log(document.body.childNodes); // old property
+        console.log(document.body.children); // new property
+        document.body.children[0].style.color="red";
+         console.log(olNode.children.length);
     </script>
 </body>
+
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <figure>
+        <img id="aiimage" height="300" width="400" src="https://th.bing.com/th/id/OIP.4GkIzKfSlOwfjc-KSwr_ZQHaLH?w=1024&h=1536&rs=1&pid=ImgDetMain" alt="image">
+        <figcaption id="imgCaption">Caption 04</figcaption>
+    </figure>
+    <script>
+    const images=[
+            {
+                imagePath:"https://preview.redd.it/the-most-random-image-every-seen-in-the-history-of-the-v0-iuzrc59aw2sb1.jpg?width=1024&format=pjpg&auto=webp&s=dd018a25303363415b10f1906c2d4b25fa47043f",
+                imageCaption:"Caption 01"
+            },
+            {
+                imagePath:"https://th.bing.com/th/id/OIP.kblu7E465F_EW7sn7ZHRgAHaGk?rs=1&pid=ImgDetMain",
+                imageCaption:"Caption 02"
+            },
+            {
+                imagePath:"https://i.pinimg.com/736x/ea/77/3f/ea773f72f94a033c80c237581730eabd.jpg",
+                imageCaption:"Caption 03"
+            },
+            {
+                imagePath:"https://th.bing.com/th/id/OIP.4GkIzKfSlOwfjc-KSwr_ZQHaLH?w=1024&h=1536&rs=1&pid=ImgDetMain",
+                imageCaption:"Caption 04"
+            }
+        ];
+        setInterval(()=>{
+            slideShow();
+        }, 6000);
+
+        let i=0;
+
+        const imageNode=document.getElementById("aiimage");
+        const figNode=document.getElementById("imgCaption");
+        function slideShow(){
+            let image=images[i];
+            imageNode.src=image.imagePath;
+            figNode.textContent=image.imageCaption;
+            i++;
+            if(i==images.length)
+                i=0;
+        }
+    </script>
+</body>
+</html>
