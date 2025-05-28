@@ -8,15 +8,20 @@
 <body>
     <div>
         <h3 id="heading">Neosoft</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi voluptatum dolor magni perferendis deserunt eos cumque dolorem impedit tempora quidem provident 
-            vel praesentium blanditiis laboriosam distinctio nesciunt, repellendus officia.</p>
+        <p class="india">India is my country.</p>
+         <p>I love my country.</p>
+          <p class="india">I love my India.</p>
+          <span class="india"> Hi india</span>  
             <button type="button" onclick="accessNode()">ACCESS NODE</button>
         </div>
         <script>
             function accessNode(){
                 const headingNode=document.getElementById("heading");
                 console.log(headingNode);
-                document.write(headingNode); // it should not be used
+                //document.write(headingNode); // it should not be used
+                const nodes=document.getElementsByClassName('india');
+                console.log(nodes);
+                
             }
         </script>
 </body>
