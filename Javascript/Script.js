@@ -31,7 +31,6 @@ console.log(add(23));
 console.log(add(45,67));
 console.log(add(56,34,23));
 
-
 const fun=function(n1,n2){
  console.log(n1);
     console.log(n2);
@@ -39,11 +38,11 @@ const fun=function(n1,n2){
 }
 fun(12,11);
 
+
 const arrowfun=(n1,n2)=>{
     console.log(n1+n2);
-    
 }
-console.log(arrowfun(43,23));
+arrowfun(43,23);
 
 (num)=>{
     console.log(num*num*num);
@@ -52,7 +51,9 @@ console.log(arrowfun(43,23));
 num=>{
      console.log(num*num*num);
 }
+/* if arrow function have single statement in body */
 const arrow2=num=>console.log(num*num*num);
 arrow2(3);
 
-
+const cubefun=num=>num*num*num /* it will automatically return the result */
+console.log(cubefun(3));
