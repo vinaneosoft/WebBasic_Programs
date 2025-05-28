@@ -34,13 +34,13 @@
         ];
         setInterval(()=>{
             slideShow();
-        }, 20000);
+        }, 6000);
 
         let i=-1;
         const imageNode=document.getElementById("aiimage");
         const figNode=document.getElementById("imgCaption");
         function slideShow(){
-             i++;
+            i++;
             if(i==images.length)
                 i=0;
             let image=images[i];
