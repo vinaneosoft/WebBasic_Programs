@@ -7,9 +7,12 @@
 </head>
 <body>
     <figure>
-        <img id="aiimage" height="300" width="400" src="https://th.bing.com/th/id/OIP.4GkIzKfSlOwfjc-KSwr_ZQHaLH?w=1024&h=1536&rs=1&pid=ImgDetMain" alt="image">
+        <img id="aiimage" height="300" width="400" 
+        src="https://th.bing.com/th/id/OIP.4GkIzKfSlOwfjc-KSwr_ZQHaLH?w=1024&h=1536&rs=1&pid=ImgDetMain" alt="image">
         <figcaption id="imgCaption">Caption 04</figcaption>
     </figure>
+    <button onclick="prevImage()">PREV</button>
+    <button onclick="nextImage()">NEXT</button>
     <script>
     const images=[
             {
@@ -31,18 +34,30 @@
         ];
         setInterval(()=>{
             slideShow();
-        }, 1000);
+        }, 20000);
 
-        let i=0;
+        let i=-1;
         const imageNode=document.getElementById("aiimage");
         const figNode=document.getElementById("imgCaption");
         function slideShow(){
+             i++;
+            if(i==images.length)
+                i=0;
             let image=images[i];
             imageNode.src=image.imagePath;
             figNode.textContent=image.imageCaption;
-            i++;
-            if(i==images.length)
-                i=0;
+           
+        }
+        function nextImage(){
+            slideShow();
+        }
+        function prevImage(){
+            i--;
+            if(i==0)
+                i=images.length-1
+            let image=images[i];
+            imageNode.src=image.imagePath;
+            figNode.textContent=image.imageCaption;
         }
     </script>
 </body>
