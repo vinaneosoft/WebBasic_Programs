@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OL</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+    <script>
+        const snacks=['samosa','panipuri','vadapav','pakoda','poha'];
+        const snacks2=new Array('samosa','panipuri','vadapav','pakoda','poha');
+        const arr1=[];
+        const arr2=new Array(3,5,67,8);
+
+        const olNode=document.createElement('ol'); // single
+
+        for(let snack of snacks){
+            const liNode=document.createElement('li');
+            liNode.textContent=snack.toUpperCase();
+            olNode.appendChild(liNode);
+           // olNode.append(liNode);
+        }
+
+        document.body.prepend(olNode);
+
+    </script>
+</body>
+</html>
