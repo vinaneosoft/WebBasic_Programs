@@ -25,6 +25,7 @@ function validateName(){
     const name=nameEle.value;
     if(name==''){
          nameErrorEle.textContent="Name is required";
+         alert("name is required");
          return false;
     }
     else if(namePattern.test(name)==false){

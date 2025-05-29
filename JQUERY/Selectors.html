@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo1</title>
+
+</head>
+<body>
+    <button id="btn">TEST</button>
+    <p class="lorem">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, vel minus? Labore magni explicabo, placeat deserunt quod ullam error sapiente quam. 
+      Accusamus distinctio suscipit vitae nam animi quo placeat sequi.
+    </p>
+    <p id="para">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, vel minus? Labore magni explicabo, placeat deserunt quod ullam error sapiente quam. 
+      Accusamus distinctio suscipit vitae nam animi quo placeat sequi.
+    </p>
+    <p class="lorem">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, vel minus? Labore magni explicabo, placeat deserunt quod ullam error sapiente quam. 
+      Accusamus distinctio suscipit vitae nam animi quo placeat sequi.
+    </p>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+  <script>
+    const buttonEle=$("#btn");
+    console.log(buttonEle);
+    console.log($(".lorem"));
+    console.log($("p"));
+
+    /*event function :  click*/
+    $('#btn').click(function(){
+      $("#para").css('background','yellow');
+      $("#para").css({
+        background:'yellow',
+        color:'pink'
+      });
+    });
+  </script>
+</body>
+</html>
