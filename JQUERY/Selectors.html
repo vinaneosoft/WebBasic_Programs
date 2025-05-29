@@ -41,7 +41,15 @@
         fontSize:'20px',
         fontStyle:'italic'
       })
+
+       $("#para").animate({
+        fontSize:'50px', // animate works only with numeric
+        color:'red'
+      },"fast", 'linear',function(){
+        alert("Animattion completed....")
+      });
     });
+
   </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HideShowToggle</title>
+    <style>
+        .flower{
+            height: 300px;
+            width: 300px;
+        }
+        #btn{
+            padding: 10px;
+            background: lightcyan;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn">HIDE</button>
+   <figure>
+     <img id="flower1" class="flower" src="https://static.vecteezy.com/system/resources/previews/022/257/308/non_2x/rose-flower-pictures-beautiful-roses-love-rose-flower-beautiful-flowers-wallpapers-ai-generated-free-photo.jpg"
+     alt="rose flower">
+    <img  id="flower2"class="flower" src="https://www.wallpaperflare.com/static/335/587/630/blooming-lotus-flower-selective-focus-photography-wallpaper.jpg"
+     alt="lotus flower">
+   </figure>
+<p>above images will hide</p>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+  <script>
+    // when u click on the button, first image should hide, after that second image should hide
+    $("#btn").click(function(){
+        $("#flower1").hide(2000,function(){
+              $("#flower2").hide(500, function(){
+                alert("All Images Hidden...")
+              });
+        });
+       
+    });
+  </script>
+</body>
+</html>

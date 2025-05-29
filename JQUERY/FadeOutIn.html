@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HideShowToggle</title>
+    <style>
+        .flower{
+            height: 300px;
+            width: 300px;
+        }
+        button{
+            padding: 10px;
+            background: lightcyan;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn">HIDE</button>
+    <button type="button" id="toggbtn">HIDE</button>
+   <figure>
+     <img class="flower" src="https://static.vecteezy.com/system/resources/previews/022/257/308/non_2x/rose-flower-pictures-beautiful-roses-love-rose-flower-beautiful-flowers-wallpapers-ai-generated-free-photo.jpg"
+     alt="rose flower">
+    <img class="flower" src="https://www.wallpaperflare.com/static/335/587/630/blooming-lotus-flower-selective-focus-photography-wallpaper.jpg"
+     alt="lotus flower">
+   </figure>
+<p>hide/show</p>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+  <script>
+    $("#btn").click(function(){
+       if($("#btn").text()=="HIDE"){
+         $(".flower").fadeOut(1000, function(){
+            $("#btn").text("SHOW");
+        });
+       }
+       else{
+        $(".flower").fadeIn(500, function(){
+            $("#btn").text("HIDE");
+        });
+       }
+    });
+
+    $("#toggbtn").click(function(){
+        $(".flower").fadeToggle(500);
+        if($("#toggbtn").text()=="HIDE"){
+            $("#toggbtn").text("SHOW")
+        }
+        else{
+            $("#toggbtn").text("HIDE")
+        }
+    });
+  </script>
+</body>
+</html>
