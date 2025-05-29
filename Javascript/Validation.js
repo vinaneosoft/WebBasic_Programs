@@ -12,15 +12,15 @@ const mailErrorEle=document.getElementById("mailerror");
 const passErrorEle=document.getElementById("passerror");
 const cpassErrorEle=document.getElementById("cpasserror");
 
-nameEle.addEventListener("blur", ()=>validateName())
-ageEle.addEventListener("blur", ()=>validateAge())
-emailEle.addEventListener("blur", ()=>validateEmail())
-passEle.addEventListener("blur", ()=>validatePassword())
-cpassEle.addEventListener("blur", ()=>validateConfirmPassword())
+nameEle.addEventListener("input", ()=>validateName())
+ageEle.addEventListener("input", ()=>validateAge())
+emailEle.addEventListener("input", ()=>validateEmail())
+passEle.addEventListener("input", ()=>validatePassword())
+cpassEle.addEventListener("input", ()=>validateConfirmPassword())
 
 const namePattern= new RegExp("^[A-Za-z ]{2,50}$");
 const emailPattern= new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
-const passwordPattern= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
+const passwordPattern= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$");
 function validateName(){
     const name=nameEle.value;
     if(name==''){
@@ -37,6 +37,9 @@ function validateAge(){
     const age=ageEle.value;
     if(age==''){
          ageErrorEle.textContent="Age is required";
+    }
+    else if(age<20 || age>50){
+         ageErrorEle.textContent="age between 20 to 50 allowed";
     }
     else{
         ageErrorEle.textContent=""; 
@@ -60,7 +63,7 @@ function validatePassword(){
          passErrorEle.textContent="Password is required";
     }
     else if(passwordPattern.test(password)==false){
-         passErrorEle.textContent="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number";
+         passErrorEle.textContent="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number and one special character";
     }
     else{
         passErrorEle.textContent=""; 
@@ -68,8 +71,12 @@ function validatePassword(){
 }
 function validateConfirmPassword(){
     const confirmpassword=cpassEle.value;
+    const password=passEle.value;
     if(confirmpassword==''){
         cpassErrorEle.textContent="Password confirmation is required";
+    }
+    else if(confirmpassword!=password){
+        cpassErrorEle.textContent="Password must match"
     }
     else{
         cpassErrorEle.textContent=""; 
