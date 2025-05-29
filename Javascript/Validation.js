@@ -18,10 +18,16 @@ emailEle.addEventListener("blur", ()=>validateEmail())
 passEle.addEventListener("blur", ()=>validatePassword())
 cpassEle.addEventListener("blur", ()=>validateConfirmPassword())
 
+const namePattern= new RegExp("^[A-Za-z ]{2,50}$");
+const emailPattern= new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+const passwordPattern= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
 function validateName(){
     const name=nameEle.value;
     if(name==''){
          nameErrorEle.textContent="Name is required";
+    }
+    else if(namePattern.test(name)==false){
+         nameErrorEle.textContent="name must contain only alphabets ranging from 2 to 50";
     }
     else{
         nameErrorEle.textContent=""; 
@@ -41,6 +47,9 @@ function validateEmail(){
     if(emailid==''){
          mailErrorEle.textContent="Please enter emailid";
     }
+    else if(emailPattern.test(emailid)==false){
+         mailErrorEle.textContent="Please enter valid email id";
+    }
     else{
         mailErrorEle.textContent=""; 
     }
@@ -49,6 +58,9 @@ function validatePassword(){
     const password=passEle.value;
     if(password==''){
          passErrorEle.textContent="Password is required";
+    }
+    else if(passwordPattern.test(password)==false){
+         passErrorEle.textContent="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number";
     }
     else{
         passErrorEle.textContent=""; 
