@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            border:3px solid pink;
+            background-color: white;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/lightmode.png" alt="mode" id="modeimage">
+
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+  <script>
+    let mode="lightmode";
+    $("#modeimage").click(()=>{
+        console.log(mode);
+        
+    if(mode=="darkmode"){
+        $('body').css({
+            background:'black',
+            color:'white'
+        })
+        $("#modeimage").prop('src','./images/lightmode.png')
+        mode='lightmode';
+    }
+    else{
+        $('body').css({
+            background:'white',
+            color:'black'
+        })
+        $("#modeimage").prop('src','./images/darkmode.png')
+        mode='darkmode';
+    }
+    });
+   
+  </script>
+</body>
+</html>
