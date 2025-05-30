@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        In JavaScript, a generator function is a special type of function that can pause its execution and 
+        later resume
+        from where it left off. It is defined using the function* syntax and works in conjunction
+        with the yield keyword to produce a sequence of values.
+    </p>
+    <h3> Key Features of Generator Functions</h3>
+    <ol>
+        <li>function* Syntax: Declares a generator function.</li>
+        <li>yield Keyword: Pauses the function and returns a value.</li>
+        <li>Iterator: Calling a generator function returns an iterator object.</li>
+        <li>next() Method: Used to resume execution and retrieve the next value.</li>
+    </ol>
+
+    <script>
+        function* simpleGenerator() {
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+
+        const gen=simpleGenerator();
+        console.log( gen.next());
+         console.log( gen.next());
+          console.log( gen.next());
+           console.log( gen.next());
+
+    function* counterFunction(){
+        let i=0;
+        while(i<=5){
+            yield i;
+           i++;
+        }
+    }
+    let counterGen=counterFunction();
+    console.log(counterGen.next());
+     console.log(counterGen.next());
+     for(value of counterGen){
+        console.log(value);
+     }
+    </script>
+</body>
+
+</html>
