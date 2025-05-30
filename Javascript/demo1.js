@@ -1,0 +1,1 @@
+var companyName = "neosoft";
