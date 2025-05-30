@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML()</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            border: 1px solid red;
+            padding: 10px;
+            width: 300px;
+            position: relative;
+        }
+
+        .sendButton {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="leftBox">
+            <p id="leftText">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in.
+            </p>
+        </div>
+
+        <button class="send-button" id="sendbtn">Send</button>
+
+        <div class="box" id="rightBox"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $("#sendbtn").click(function(){
+            sendContent();
+        })
+
+        function sendContent() {
+            $("#rightBox").html($("#leftBox").html());
+            $("#leftBox").html("");
+        }
+    </script>
+</body>
+</html>
