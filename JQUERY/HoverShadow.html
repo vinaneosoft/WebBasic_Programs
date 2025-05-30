@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Shadow</title>
+    <style>
+        div{
+            background: black;
+            color:white;
+            height:30px;
+            width: 130px;
+            border: 2px solid white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="india">India</span>
+        <span class="india">is</span>
+        <span class="india">my</span>
+        <span class="india">country</span>
+    </div>
+     <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+  <script>
+    $(".india").hover(function(){
+        $(this).css({
+            textShadow:'0px 0px 10px white'
+        }).mouseleave(function(){
+             $(this).css('textShadow','')
+        })
+    })
+  </script>
+</body>
+</html>
