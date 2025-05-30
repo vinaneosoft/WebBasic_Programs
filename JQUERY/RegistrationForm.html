@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <h2>COURSE REGISTRATION FORM</h2>
+ <form novalidate id="regform">
+    <table>
+        <tr>
+            <td><label for="myname">Enter Your Name</label></td>
+            <td><input type="text" name="myname" id="myname"  required></td>
+        </tr>
+        <tr><td></td><td class="error" id="nameerror"></td></tr>
+        <tr>
+            <td><label for="age">Enter Your Age</label></td>
+            <td><input type="number" name="age" id="age"></td>
+        </tr>
+        <tr><td></td><td class="error" id="ageerror"></td></tr>
+        <tr>
+            <td><label for="mail">Enter Your Email Id:</label></td>
+            <td><input type="email" name="mail" id="mail"></td>
+        </tr>
+        <tr><td></td><td class="error" id="mailerror"></td></tr>
+        <tr>
+            <td><label for="pass">Set Password:</label></td>
+            <td><input type="password" name="pass" id="pass"></td>
+        </tr>
+        <tr><td></td><td class="error" id="passerror"></td></tr>
+         <tr>
+            <td><label for="cpass">Confirm Password:</label></td>
+            <td><input type="password" name="cpass" id="cpass"></td>
+        </tr>
+        <tr><td></td><td class="error" id="cpasserror"></td></tr>
+         <tr>
+            <td></td>
+            <td><input type="submit" value="REGISTER">
+            <input type="reset" value="RESET"></td>
+        </tr>
+    </table>
+ </form>
+ 
+
+
+ <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+ <script src="./Validation.js"></script>
+</body>
+</html>

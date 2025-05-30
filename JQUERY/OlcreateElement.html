@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .olstyle{
+            text-transform: uppercase;
+        }
+        .colors{
+            background: yellow;
+            color: green;
+        }
+    </style>
 </head>
 <body>
     
@@ -17,6 +26,10 @@
     const techs=['html','css','javascript','jquery'];
     const olEle=$("<ol>");
     olEle.prop('id','techlist');
+    //olEle.prop('class', 'olstyle');
+   // olEle.prop('class', 'colors');
+   olEle.addClass('olstyle'); // classList.add in js
+   olEle.addClass('colors');
     techs.forEach((tech, index)=>{
         const liEle=$("<li>")
         liEle.text(tech);
